@@ -20,6 +20,7 @@ export const IndexPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
 
+  console.log(image);
   return (
     <div>
       <FullWidthImage img={heroImage} title={title} subheading={subheading} />
@@ -39,26 +40,22 @@ export const IndexPageTemplate = ({
                   </div>
                   <div className="columns">
                     <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
+                      <h3 className="font-semibold text-4xl">{heading}</h3>
                       <p>{description}</p>
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />
                   <div className="columns">
-                    <div className="column is-12 has-text-centered">
+                    <div className="column is-12 text-center">
                       <Link className="btn" to="/products">
                         See all products
                       </Link>
                     </div>
                   </div>
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                    </h3>
+                    <h3 className="font-semibold text-4xl">Latest stories</h3>
                     <BlogRoll />
-                    <div className="column is-12 has-text-centered">
+                    <div className="column is-12 text-center">
                       <Link className="btn" to="/blog">
                         Read more
                       </Link>

@@ -14,12 +14,11 @@ export default function FullWidthImage(props) {
   return (
     <React.Fragment>
       <div
-        className="margin-top-0"
+        className="mt-0"
         style={{
           display: "grid",
           alignItems: "center",
-        }}
-      >
+        }}>
         {img?.url ? (
           <img
             src={img}
@@ -61,27 +60,16 @@ export default function FullWidthImage(props) {
               // This centers the other elements inside the hero component
               placeItems: "center",
               display: "grid",
-            }}
-          >
+            }}>
             {/* Any content here will be centered in the component */}
             {title && (
-              <h1
-                className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-                style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
-                  color: "white",
-                  lineHeight: "1",
-                  padding: "0.25em",
-                }}
-              >
+              <h1 className="font-bold md:text-4xl xl:text-5xl bg-primary-500 text-white p-1 leading-none shadow shadow-primary-500/50">
                 {title}
               </h1>
             )}
             {subheading && (
               <h3
-                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+                className="font-bold md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
                   boxShadow:
                     "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
@@ -90,8 +78,7 @@ export default function FullWidthImage(props) {
                   lineHeight: "1",
                   padding: "0.25rem",
                   marginTop: "0.5rem",
-                }}
-              >
+                }}>
                 {subheading}
               </h3>
             )}

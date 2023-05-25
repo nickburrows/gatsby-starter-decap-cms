@@ -1,11 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql, StaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
-
-const BlogRollTemplate = (props) => {
-  
+const BlogRollTemplate = props => {
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
@@ -15,9 +13,8 @@ const BlogRollTemplate = (props) => {
           <div className="is-parent column is-6" key={post.id}>
             <article
               className={`blog-list-item tile is-child box notification ${
-                post.frontmatter.featuredpost ? 'is-featured' : ''
-              }`}
-            >
+                post.frontmatter.featuredpost ? "is-featured" : ""
+              }`}>
               <header>
                 {post?.frontmatter?.featuredimage && (
                   <div className="featured-thumbnail">
@@ -34,16 +31,15 @@ const BlogRollTemplate = (props) => {
                       }}
                     />
                   </div>
-                ) }
+                )}
                 <p className="post-meta">
                   <Link
-                    className="title has-text-primary is-size-4"
-                    to={post.fields.slug}
-                  >
+                    className="font-bold underline hover:no-underline text-orange-700 hover:text-orange-800 text-2xl"
+                    to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
                   <span> &bull; </span>
-                  <span className="subtitle is-size-5 is-block">
+                  <span className="subtitle text-xl block">
                     {post.frontmatter.date}
                   </span>
                 </p>
@@ -60,8 +56,8 @@ const BlogRollTemplate = (props) => {
           </div>
         ))}
     </div>
-  )
-}
+  );
+};
 
 BlogRoll.propTypes = {
   data: PropTypes.shape({
@@ -69,8 +65,7 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
-
+};
 
 export default function BlogRoll() {
   return (
@@ -100,7 +95,6 @@ export default function BlogRoll() {
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                 }
