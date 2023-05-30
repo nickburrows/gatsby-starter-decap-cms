@@ -19,8 +19,8 @@ const Footer = () => {
       <div className="content text-center">
         <img src={logo} alt="Kaldi" className="w-[14em] h-[10em] mx-auto" />
       </div>
-      <div className="content text-center text-white bg-stone-800">
-        <div className="container bg-stone-800 text-white">
+      <div className="content text-center text-white bg-stone-800 dark:bg-woodsmoke-800">
+        <div className="container bg-stone-800 dark:bg-woodsmoke-800 text-white">
           <div className="columns max-w-[100vw]">
             <div className="column is-4">
               <section className="menu">
@@ -75,22 +75,22 @@ const Footer = () => {
             </div>
             <div className="gap-2 grid grid-cols-4">
               <a
-                className="text-gray-700 hover:text-gray-800 bg-white inline-flex items-center justify-center m-0 rounded-full p-2 w-8 h-8"
+                className="text-gray-700 hover:text-facebook-500 bg-white inline-flex items-center justify-center m-0 rounded-full p-2 w-8 h-8"
                 href="https://facebook.com">
                 <FaFacebookSquare className="w-8 h-8 outline-blue-500" />
               </a>
               <a
-                className="text-gray-700 hover:text-gray-800 bg-white inline-flex items-center justify-center m-0 rounded-full p-2 w-8 h-8"
+                className="text-gray-700 hover:text-twitter-500 bg-white inline-flex items-center justify-center m-0 rounded-full p-2 w-8 h-8"
                 href="https://twitter.com">
                 <FaTwitter className="w-8 h-8 outline-blue-500" />
               </a>
               <a
-                className="text-gray-700 hover:text-gray-800 bg-white inline-flex items-center justify-center m-0 rounded-full p-2 w-8 h-8"
+                className="text-gray-700 hover:text-instagram-500 bg-white inline-flex items-center justify-center m-0 rounded-full p-2 w-8 h-8"
                 href="https://instagram.com">
                 <FaInstagram className="w-8 h-8 outline-blue-500" />
               </a>
               <a
-                className="text-gray-700 hover:text-gray-800 bg-white inline-flex items-center justify-center m-0 rounded-full p-2 w-8 h-8"
+                className="text-gray-700 hover:text-vimeo-500 bg-white inline-flex items-center justify-center m-0 rounded-full p-2 w-8 h-8"
                 href="https://vimeo.com">
                 <FaVimeoV className="w-8 h-8 outline-blue-500" />
               </a>

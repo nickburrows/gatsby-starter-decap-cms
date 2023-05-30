@@ -1,10 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
+// import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
+import { FaGithub } from "react-icons/fa";
+import DarkToggle from "./DarkToggle";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (!darkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  useEffect(() => {
+    if ("theme" in localStorage) {
+      if (localStorage.getItem("theme") === "dark") {
+        setDarkMode(true);
+      } else {
+        setDarkMode(false);
+      }
+    }
+  }, []);
 
   return (
     <nav
@@ -63,14 +84,18 @@ const Navbar = () => {
               Form Examples
             </Link>
           </li>
-          <li className="navbar-end text-center">
+          <li className="flex items-center ml-auto justify-center md:justify-end text-center gap-2">
+            <DarkToggle
+              toggle={() => setDarkMode(!darkMode)}
+              isDark={darkMode}
+            />
             <a
               className="navbar-item"
               href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
               target="_blank"
               rel="noopener noreferrer">
               <span className="icon">
-                <img src={github} alt="Github" />
+                <FaGithub className="text-github-500 dark:text-white" />
               </span>
             </a>
           </li>

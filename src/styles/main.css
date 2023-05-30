@@ -16,7 +16,7 @@
   @apply w-screen h-[400px] bg-cover bg-bottom flex justify-center items-center;
 }
 .btn {
-  @apply inline-block text-lg md:text-base leading-tight bg-white rounded no-underline font-bold text-[#CC3700] text-center shadow-[inset_0_0_0_2px_#f40] transition-all duration-[0.15s] ease-[ease] pt-3 pb-2.5 px-4;
+  @apply inline-block text-lg md:text-base leading-tight bg-white dark:bg-transparent rounded no-underline font-bold text-primary-500 border border-primary-500 dark:border-danube-500 dark:shadow-danube-500/20 text-center shadow-[inset_0_0_0_2px_#f40] transition-all duration-[0.15s] ease-[ease] pt-3 pb-2.5 px-4;
 }
 .margin-top-0 {
   @apply mt-0;
@@ -31,7 +31,7 @@
   @apply px-4 py-0;
 }
 footer.footer {
-  @apply bg-stone-800 pt-12 pb-0 px-0;
+  @apply bg-stone-800 dark:bg-woodsmoke-800 pt-12 pb-0 px-0;
 }
 .menu-label {
   @apply text-[1em] text-left text-neutral-100 md:text-[0.75em] tracking-widest uppercase;
@@ -47,7 +47,7 @@ footer.footer {
   @apply bg-neutral-100 w-[1em] h-[1em] align-middle inline m-[0.5em] pt-[0.5em] pb-[0.3em] px-[0.5em] rounded-[1em];
 }
 .blog-list-item.is-featured {
-  @apply bg-[rgba(214,64,0,0.2)];
+  @apply bg-[rgba(214,64,0,0.2)] dark:bg-danube-500/20;
 }
 .blog-list-item header {
   @apply flex mb-[1em];
@@ -185,7 +185,7 @@ fieldset[disabled] .button {
 .delete::before,
 .modal-close::after,
 .delete::after {
-  @apply bg-white content-[""] block absolute -translate-x-2/4 -translate-y-2/4 rotate-45 origin-[center_center] left-2/4 top-2/4;
+  @apply bg-white dark:bg-transparent content-[""] block absolute -translate-x-2/4 -translate-y-2/4 rotate-45 origin-[center_center] left-2/4 top-2/4;
 }
 .modal-close::before,
 .delete::before {
@@ -313,7 +313,7 @@ textarea {
   @apply m-0;
 }
 html {
-  @apply box-border bg-white text-base min-w-[300px] overflow-x-hidden overflow-y-scroll;
+  @apply box-border bg-white dark:bg-transparent text-base min-w-[300px] overflow-x-hidden overflow-y-scroll;
 }
 *,
 *::before,
@@ -375,16 +375,16 @@ body {
   @apply text-[#333] text-[1em] font-normal leading-normal;
 }
 a {
-  @apply text-ceruleanBlue-500 cursor-pointer no-underline hover:text-[hsl(0,0%,21%)];
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500 cursor-pointer no-underline hover:text-[hsl(0,0%,21%)];
 }
 /* a strong {
   @apply text-current;
 } */
 code {
-  @apply bg-neutral-100 text-[#da1039] text-[0.875em] font-[normal] px-[0.5em] py-[0.25em];
+  @apply bg-neutral-100 dark:bg-transparent text-[#da1039] text-[0.875em] font-[normal] px-[0.5em] py-[0.25em];
 }
 hr {
-  @apply bg-neutral-100 block h-0.5 mx-0 my-6 border-[none];
+  @apply bg-neutral-100 dark:bg-transparent block h-0.5 mx-0 my-6 border-[none];
 }
 img {
   @apply h-auto max-w-full;
@@ -407,7 +407,7 @@ fieldset {
   @apply border-[none];
 }
 pre {
-  @apply bg-neutral-100 text-[hsl(0,0%,29%)] text-[0.875em] overflow-x-auto whitespace-pre px-6 py-5;
+  @apply bg-neutral-100 dark:bg-transparent text-[hsl(0,0%,29%)] text-[0.875em] overflow-x-auto whitespace-pre px-6 py-5;
   -webkit-overflow-scrolling: touch;
   word-wrap: normal;
 }
@@ -435,7 +435,7 @@ table th {
 }
 /* Bulma Elements */
 .box {
-  @apply bg-white shadow-[0_0.5em_1em_-0.125em_rgba(43,37,35,0.1),0_0px_0_1px_rgba(43,37,35,0.02)] text-[hsl(0,0%,29%)] block p-5 rounded-md;
+  @apply bg-white dark:bg-transparent shadow-[0_0.5em_1em_-0.125em_rgba(43,37,35,0.1),0_0px_0_1px_rgba(43,37,35,0.02)] text-[hsl(0,0%,29%)] block p-5 rounded-md;
 }
 a.box:hover,
 a.box:focus {
@@ -445,7 +445,7 @@ a.box:active {
   @apply shadow-[inset_0_1px_2px_rgba(43,37,35,0.2),0_0_0_1px_hsl(229,53%,53%)];
 }
 .button {
-  @apply bg-white border text-[hsl(0,0%,21%)] cursor-pointer justify-center pb-[calc(0.5em_-_1px)] pt-[calc(0.5em_-_1px)] text-center whitespace-nowrap px-[1em] border-[hsl(0,0%,86%)];
+  @apply bg-white dark:bg-transparent border text-[hsl(0,0%,21%)] cursor-pointer justify-center pb-[calc(0.5em_-_1px)] pt-[calc(0.5em_-_1px)] text-center whitespace-nowrap px-[1em] border-[hsl(0,0%,86%)];
 }
 .button strong {
   @apply text-inherit;
@@ -471,7 +471,7 @@ a.box:active {
 }
 .button:focus,
 .button.is-focused {
-  @apply text-[hsl(0,0%,21%)] border-ceruleanBlue-500;
+  @apply text-[hsl(0,0%,21%)] border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .button:focus:not(:active),
 .button.is-focused:not(:active) {
@@ -488,7 +488,7 @@ a.box:active {
 .button.is-text.is-hovered,
 .button.is-text:focus,
 .button.is-text.is-focused {
-  @apply bg-neutral-100 text-[hsl(0,0%,21%)];
+  @apply bg-neutral-100 dark:bg-transparent text-[hsl(0,0%,21%)];
 }
 .button.is-text:active,
 .button.is-text.is-active {
@@ -499,23 +499,23 @@ fieldset[disabled] .button.is-text {
   @apply bg-transparent shadow-none border-transparent;
 }
 .button.is-ghost {
-  @apply text-ceruleanBlue-500 no-underline border-transparent;
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500 no-underline border-transparent;
   background: none;
 }
 .button.is-ghost:hover,
 .button.is-ghost.is-hovered {
-  @apply text-ceruleanBlue-500 underline;
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500 underline;
 }
 .button.is-white {
-  @apply bg-white text-zeus-500 border-transparent;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .button.is-white:hover,
 .button.is-white.is-hovered {
-  @apply bg-[#f9f9f9] text-zeus-500 border-transparent;
+  @apply bg-[#f9f9f9] text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .button.is-white:focus,
 .button.is-white.is-focused {
-  @apply text-zeus-500 border-transparent;
+  @apply text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .button.is-white:focus:not(:active),
 .button.is-white.is-focused:not(:active) {
@@ -523,11 +523,11 @@ fieldset[disabled] .button.is-text {
 }
 .button.is-white:active,
 .button.is-white.is-active {
-  @apply bg-[#f2f2f2] text-zeus-500 border-transparent;
+  @apply bg-[#f2f2f2] text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .button.is-white[disabled],
 fieldset[disabled] .button.is-white {
-  @apply bg-white shadow-none border-white;
+  @apply bg-white dark:bg-transparent shadow-none border-white;
 }
 .button.is-white.is-inverted {
   @apply bg-zeus-500 text-white;
@@ -550,7 +550,7 @@ fieldset[disabled] .button.is-white.is-inverted {
 .button.is-white.is-outlined.is-hovered,
 .button.is-white.is-outlined:focus,
 .button.is-white.is-outlined.is-focused {
-  @apply bg-white text-zeus-500 border-white;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500 border-white;
 }
 .button.is-white.is-outlined.is-loading::after {
   @apply border-[transparent_transparent_hsl(0,0%,100%)_hsl(0,0%,100%)];
@@ -566,7 +566,7 @@ fieldset[disabled] .button.is-white.is-outlined {
   @apply bg-transparent shadow-none text-white border-white;
 }
 .button.is-white.is-inverted.is-outlined {
-  @apply bg-transparent text-zeus-500 border-zeus-500;
+  @apply bg-transparent text-zeus-500 dark:text-cyan-500 border-zeus-500;
 }
 .button.is-white.is-inverted.is-outlined:hover,
 .button.is-white.is-inverted.is-outlined.is-hovered,
@@ -582,7 +582,7 @@ fieldset[disabled] .button.is-white.is-outlined {
 }
 .button.is-white.is-inverted.is-outlined[disabled],
 fieldset[disabled] .button.is-white.is-inverted.is-outlined {
-  @apply bg-transparent shadow-none text-zeus-500 border-zeus-500;
+  @apply bg-transparent shadow-none text-zeus-500 dark:text-cyan-500 border-zeus-500;
 }
 .button.is-black {
   @apply bg-zeus-500 text-white border-transparent;
@@ -608,7 +608,7 @@ fieldset[disabled] .button.is-black {
   @apply bg-zeus-500 shadow-none border-zeus-500;
 }
 .button.is-black.is-inverted {
-  @apply bg-white text-zeus-500;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 .button.is-black.is-inverted:hover,
 .button.is-black.is-inverted.is-hovered {
@@ -616,13 +616,13 @@ fieldset[disabled] .button.is-black {
 }
 .button.is-black.is-inverted[disabled],
 fieldset[disabled] .button.is-black.is-inverted {
-  @apply bg-white shadow-none text-zeus-500 border-transparent;
+  @apply bg-white dark:bg-transparent shadow-none text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .button.is-black.is-loading::after {
   @apply border-[transparent_transparent_hsl(0,0%,100%)_hsl(0,0%,100%)];
 }
 .button.is-black.is-outlined {
-  @apply bg-transparent text-zeus-500 border-zeus-500;
+  @apply bg-transparent text-zeus-500 dark:text-cyan-500 border-zeus-500;
 }
 .button.is-black.is-outlined:hover,
 .button.is-black.is-outlined.is-hovered,
@@ -641,7 +641,7 @@ fieldset[disabled] .button.is-black.is-inverted {
 }
 .button.is-black.is-outlined[disabled],
 fieldset[disabled] .button.is-black.is-outlined {
-  @apply bg-transparent shadow-none text-zeus-500 border-zeus-500;
+  @apply bg-transparent shadow-none text-zeus-500 dark:text-cyan-500 border-zeus-500;
 }
 .button.is-black.is-inverted.is-outlined {
   @apply bg-transparent text-white border-white;
@@ -650,7 +650,7 @@ fieldset[disabled] .button.is-black.is-outlined {
 .button.is-black.is-inverted.is-outlined.is-hovered,
 .button.is-black.is-inverted.is-outlined:focus,
 .button.is-black.is-inverted.is-outlined.is-focused {
-  @apply bg-white text-zeus-500;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 .button.is-black.is-inverted.is-outlined.is-loading:hover::after,
 .button.is-black.is-inverted.is-outlined.is-loading.is-hovered::after,
@@ -663,15 +663,15 @@ fieldset[disabled] .button.is-black.is-inverted.is-outlined {
   @apply bg-transparent shadow-none text-white border-white;
 }
 .button.is-light {
-  @apply bg-neutral-100 text-black/70 border-transparent;
+  @apply bg-neutral-100 dark:bg-transparent text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .button.is-light:hover,
 .button.is-light.is-hovered {
-  @apply bg-[#eeeeee] text-black/70 border-transparent;
+  @apply bg-[#eeeeee] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .button.is-light:focus,
 .button.is-light.is-focused {
-  @apply text-black/70 border-transparent;
+  @apply text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .button.is-light:focus:not(:active),
 .button.is-light.is-focused:not(:active) {
@@ -679,11 +679,11 @@ fieldset[disabled] .button.is-black.is-inverted.is-outlined {
 }
 .button.is-light:active,
 .button.is-light.is-active {
-  @apply bg-[#e8e8e8] text-black/70 border-transparent;
+  @apply bg-[#e8e8e8] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .button.is-light[disabled],
 fieldset[disabled] .button.is-light {
-  @apply bg-neutral-100 border-neutral-100 shadow-none;
+  @apply bg-neutral-100 dark:bg-transparent border-neutral-100 shadow-none;
 }
 .button.is-light.is-inverted {
   @apply bg-black/70 text-neutral-100;
@@ -706,7 +706,7 @@ fieldset[disabled] .button.is-light.is-inverted {
 .button.is-light.is-outlined.is-hovered,
 .button.is-light.is-outlined:focus,
 .button.is-light.is-outlined.is-focused {
-  @apply bg-neutral-100 border-neutral-100 text-black/70;
+  @apply bg-neutral-100 dark:bg-transparent border-neutral-100 text-black/70 dark:text-cyan-500/70;
 }
 .button.is-light.is-outlined.is-loading::after {
   @apply border-[transparent_transparent_hsl(0,0%,96%)_hsl(0,0%,96%)];
@@ -722,7 +722,7 @@ fieldset[disabled] .button.is-light.is-outlined {
   @apply bg-transparent border-neutral-100 shadow-none text-neutral-100;
 }
 .button.is-light.is-inverted.is-outlined {
-  @apply bg-transparent text-black/70 border-black/70;
+  @apply bg-transparent text-black/70 dark:text-cyan-500/70 border-black/70;
 }
 .button.is-light.is-inverted.is-outlined:hover,
 .button.is-light.is-inverted.is-outlined.is-hovered,
@@ -738,7 +738,7 @@ fieldset[disabled] .button.is-light.is-outlined {
 }
 .button.is-light.is-inverted.is-outlined[disabled],
 fieldset[disabled] .button.is-light.is-inverted.is-outlined {
-  @apply bg-transparent shadow-none text-black/70 border-black/70;
+  @apply bg-transparent shadow-none text-black/70 dark:text-cyan-500/70 border-black/70;
 }
 .button.is-dark {
   @apply bg-[hsl(0,0%,21%)] text-white border-transparent;
@@ -764,7 +764,7 @@ fieldset[disabled] .button.is-dark {
   @apply bg-[hsl(0,0%,21%)] shadow-none border-[hsl(0,0%,21%)];
 }
 .button.is-dark.is-inverted {
-  @apply bg-white text-[hsl(0,0%,21%)];
+  @apply bg-white dark:bg-transparent text-[hsl(0,0%,21%)];
 }
 .button.is-dark.is-inverted:hover,
 .button.is-dark.is-inverted.is-hovered {
@@ -772,7 +772,7 @@ fieldset[disabled] .button.is-dark {
 }
 .button.is-dark.is-inverted[disabled],
 fieldset[disabled] .button.is-dark.is-inverted {
-  @apply bg-white shadow-none text-[hsl(0,0%,21%)] border-transparent;
+  @apply bg-white dark:bg-transparent shadow-none text-[hsl(0,0%,21%)] border-transparent;
 }
 .button.is-dark.is-loading::after {
   @apply border-[transparent_transparent_#fff_#fff];
@@ -806,7 +806,7 @@ fieldset[disabled] .button.is-dark.is-outlined {
 .button.is-dark.is-inverted.is-outlined.is-hovered,
 .button.is-dark.is-inverted.is-outlined:focus,
 .button.is-dark.is-inverted.is-outlined.is-focused {
-  @apply bg-white text-[hsl(0,0%,21%)];
+  @apply bg-white dark:bg-transparent text-[hsl(0,0%,21%)];
 }
 .button.is-dark.is-inverted.is-outlined.is-loading:hover::after,
 .button.is-dark.is-inverted.is-outlined.is-loading.is-hovered::after,
@@ -842,7 +842,7 @@ fieldset[disabled] .button.is-primary {
   @apply bg-grenadier-500 shadow-none border-grenadier-500;
 }
 .button.is-primary.is-inverted {
-  @apply bg-white text-grenadier-500;
+  @apply bg-white dark:bg-transparent text-grenadier-500;
 }
 .button.is-primary.is-inverted:hover,
 .button.is-primary.is-inverted.is-hovered {
@@ -850,7 +850,7 @@ fieldset[disabled] .button.is-primary {
 }
 .button.is-primary.is-inverted[disabled],
 fieldset[disabled] .button.is-primary.is-inverted {
-  @apply bg-white shadow-none text-grenadier-500 border-transparent;
+  @apply bg-white dark:bg-transparent shadow-none text-grenadier-500 border-transparent;
 }
 .button.is-primary.is-loading::after {
   @apply border-[transparent_transparent_#fff_#fff];
@@ -884,7 +884,7 @@ fieldset[disabled] .button.is-primary.is-outlined {
 .button.is-primary.is-inverted.is-outlined.is-hovered,
 .button.is-primary.is-inverted.is-outlined:focus,
 .button.is-primary.is-inverted.is-outlined.is-focused {
-  @apply bg-white text-grenadier-500;
+  @apply bg-white dark:bg-transparent text-grenadier-500;
 }
 .button.is-primary.is-inverted.is-outlined.is-loading:hover::after,
 .button.is-primary.is-inverted.is-outlined.is-loading.is-hovered::after,
@@ -908,7 +908,7 @@ fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
   @apply bg-[#ffdfd1] text-[#eb4600] border-transparent;
 }
 .button.is-link {
-  @apply bg-ceruleanBlue-500 text-white border-transparent;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white border-transparent;
 }
 .button.is-link:hover,
 .button.is-link.is-hovered {
@@ -928,10 +928,10 @@ fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
 }
 .button.is-link[disabled],
 fieldset[disabled] .button.is-link {
-  @apply bg-ceruleanBlue-500 shadow-none border-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 shadow-none border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .button.is-link.is-inverted {
-  @apply bg-white text-ceruleanBlue-500;
+  @apply bg-white dark:bg-transparent text-ceruleanBlue-500 dark:text-shakespeare-500;
 }
 .button.is-link.is-inverted:hover,
 .button.is-link.is-inverted.is-hovered {
@@ -939,19 +939,19 @@ fieldset[disabled] .button.is-link {
 }
 .button.is-link.is-inverted[disabled],
 fieldset[disabled] .button.is-link.is-inverted {
-  @apply bg-white shadow-none text-ceruleanBlue-500 border-transparent;
+  @apply bg-white dark:bg-transparent shadow-none text-ceruleanBlue-500 dark:text-shakespeare-500 border-transparent;
 }
 .button.is-link.is-loading::after {
   @apply border-[transparent_transparent_#fff_#fff];
 }
 .button.is-link.is-outlined {
-  @apply bg-transparent text-ceruleanBlue-500 border-ceruleanBlue-500;
+  @apply bg-transparent text-ceruleanBlue-500 dark:text-shakespeare-500 border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .button.is-link.is-outlined:hover,
 .button.is-link.is-outlined.is-hovered,
 .button.is-link.is-outlined:focus,
 .button.is-link.is-outlined.is-focused {
-  @apply bg-ceruleanBlue-500 text-white border-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .button.is-link.is-outlined.is-loading::after {
   @apply border-[transparent_transparent_hsl(229,53%,53%)_hsl(229,53%,53%)];
@@ -964,7 +964,7 @@ fieldset[disabled] .button.is-link.is-inverted {
 }
 .button.is-link.is-outlined[disabled],
 fieldset[disabled] .button.is-link.is-outlined {
-  @apply bg-transparent shadow-none text-ceruleanBlue-500 border-ceruleanBlue-500;
+  @apply bg-transparent shadow-none text-ceruleanBlue-500 dark:text-shakespeare-500 border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .button.is-link.is-inverted.is-outlined {
   @apply bg-transparent text-white border-white;
@@ -973,7 +973,7 @@ fieldset[disabled] .button.is-link.is-outlined {
 .button.is-link.is-inverted.is-outlined.is-hovered,
 .button.is-link.is-inverted.is-outlined:focus,
 .button.is-link.is-inverted.is-outlined.is-focused {
-  @apply bg-white text-ceruleanBlue-500;
+  @apply bg-white dark:bg-transparent text-ceruleanBlue-500 dark:text-shakespeare-500;
 }
 .button.is-link.is-inverted.is-outlined.is-loading:hover::after,
 .button.is-link.is-inverted.is-outlined.is-loading.is-hovered::after,
@@ -1020,7 +1020,7 @@ fieldset[disabled] .button.is-info {
   @apply bg-[hsl(207,61%,53%)] shadow-none border-[hsl(207,61%,53%)];
 }
 .button.is-info.is-inverted {
-  @apply bg-white text-[hsl(207,61%,53%)];
+  @apply bg-white dark:bg-transparent text-[hsl(207,61%,53%)];
 }
 .button.is-info.is-inverted:hover,
 .button.is-info.is-inverted.is-hovered {
@@ -1028,7 +1028,7 @@ fieldset[disabled] .button.is-info {
 }
 .button.is-info.is-inverted[disabled],
 fieldset[disabled] .button.is-info.is-inverted {
-  @apply bg-white shadow-none text-[hsl(207,61%,53%)] border-transparent;
+  @apply bg-white dark:bg-transparent shadow-none text-[hsl(207,61%,53%)] border-transparent;
 }
 .button.is-info.is-loading::after {
   @apply border-[transparent_transparent_#fff_#fff];
@@ -1062,7 +1062,7 @@ fieldset[disabled] .button.is-info.is-outlined {
 .button.is-info.is-inverted.is-outlined.is-hovered,
 .button.is-info.is-inverted.is-outlined:focus,
 .button.is-info.is-inverted.is-outlined.is-focused {
-  @apply bg-white text-[hsl(207,61%,53%)];
+  @apply bg-white dark:bg-transparent text-[hsl(207,61%,53%)];
 }
 .button.is-info.is-inverted.is-outlined.is-loading:hover::after,
 .button.is-info.is-inverted.is-outlined.is-loading.is-hovered::after,
@@ -1109,7 +1109,7 @@ fieldset[disabled] .button.is-success {
   @apply bg-[hsl(153,53%,53%)] shadow-none border-[hsl(153,53%,53%)];
 }
 .button.is-success.is-inverted {
-  @apply bg-white text-[hsl(153,53%,53%)];
+  @apply bg-white dark:bg-transparent text-[hsl(153,53%,53%)];
 }
 .button.is-success.is-inverted:hover,
 .button.is-success.is-inverted.is-hovered {
@@ -1117,7 +1117,7 @@ fieldset[disabled] .button.is-success {
 }
 .button.is-success.is-inverted[disabled],
 fieldset[disabled] .button.is-success.is-inverted {
-  @apply bg-white shadow-none text-[hsl(153,53%,53%)] border-transparent;
+  @apply bg-white dark:bg-transparent shadow-none text-[hsl(153,53%,53%)] border-transparent;
 }
 .button.is-success.is-loading::after {
   @apply border-[transparent_transparent_#fff_#fff];
@@ -1151,7 +1151,7 @@ fieldset[disabled] .button.is-success.is-outlined {
 .button.is-success.is-inverted.is-outlined.is-hovered,
 .button.is-success.is-inverted.is-outlined:focus,
 .button.is-success.is-inverted.is-outlined.is-focused {
-  @apply bg-white text-[hsl(153,53%,53%)];
+  @apply bg-white dark:bg-transparent text-[hsl(153,53%,53%)];
 }
 .button.is-success.is-inverted.is-outlined.is-loading:hover::after,
 .button.is-success.is-inverted.is-outlined.is-loading.is-hovered::after,
@@ -1175,15 +1175,15 @@ fieldset[disabled] .button.is-success.is-inverted.is-outlined {
   @apply bg-[#dcf4e9] text-[#257953] border-transparent;
 }
 .button.is-warning {
-  @apply bg-[hsl(44,100%,77%)] text-black/70 border-transparent;
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .button.is-warning:hover,
 .button.is-warning.is-hovered {
-  @apply bg-[#ffdc7d] text-black/70 border-transparent;
+  @apply bg-[#ffdc7d] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .button.is-warning:focus,
 .button.is-warning.is-focused {
-  @apply text-black/70 border-transparent;
+  @apply text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .button.is-warning:focus:not(:active),
 .button.is-warning.is-focused:not(:active) {
@@ -1191,7 +1191,7 @@ fieldset[disabled] .button.is-success.is-inverted.is-outlined {
 }
 .button.is-warning:active,
 .button.is-warning.is-active {
-  @apply bg-goldenrod-500 text-black/70 border-transparent;
+  @apply bg-goldenrod-500 text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .button.is-warning[disabled],
 fieldset[disabled] .button.is-warning {
@@ -1218,7 +1218,7 @@ fieldset[disabled] .button.is-warning.is-inverted {
 .button.is-warning.is-outlined.is-hovered,
 .button.is-warning.is-outlined:focus,
 .button.is-warning.is-outlined.is-focused {
-  @apply bg-[hsl(44,100%,77%)] text-black/70 border-[hsl(44,100%,77%)];
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70 border-[hsl(44,100%,77%)];
 }
 .button.is-warning.is-outlined.is-loading::after {
   @apply border-[transparent_transparent_hsl(44,100%,77%)_hsl(44,100%,77%)];
@@ -1234,7 +1234,7 @@ fieldset[disabled] .button.is-warning.is-outlined {
   @apply bg-transparent shadow-none text-[hsl(44,100%,77%)] border-[hsl(44,100%,77%)];
 }
 .button.is-warning.is-inverted.is-outlined {
-  @apply bg-transparent text-black/70 border-black/70;
+  @apply bg-transparent text-black/70 dark:text-cyan-500/70 border-black/70;
 }
 .button.is-warning.is-inverted.is-outlined:hover,
 .button.is-warning.is-inverted.is-outlined.is-hovered,
@@ -1250,7 +1250,7 @@ fieldset[disabled] .button.is-warning.is-outlined {
 }
 .button.is-warning.is-inverted.is-outlined[disabled],
 fieldset[disabled] .button.is-warning.is-inverted.is-outlined {
-  @apply bg-transparent shadow-none text-black/70 border-black/70;
+  @apply bg-transparent shadow-none text-black/70 dark:text-cyan-500/70 border-black/70;
 }
 .button.is-warning.is-light {
   @apply bg-[#fffaeb] text-[#946c00];
@@ -1287,7 +1287,7 @@ fieldset[disabled] .button.is-danger {
   @apply bg-[hsl(348,86%,61%)] shadow-none border-[hsl(348,86%,61%)];
 }
 .button.is-danger.is-inverted {
-  @apply bg-white text-[hsl(348,86%,61%)];
+  @apply bg-white dark:bg-transparent text-[hsl(348,86%,61%)];
 }
 .button.is-danger.is-inverted:hover,
 .button.is-danger.is-inverted.is-hovered {
@@ -1295,7 +1295,7 @@ fieldset[disabled] .button.is-danger {
 }
 .button.is-danger.is-inverted[disabled],
 fieldset[disabled] .button.is-danger.is-inverted {
-  @apply bg-white shadow-none text-[hsl(348,86%,61%)] border-transparent;
+  @apply bg-white dark:bg-transparent shadow-none text-[hsl(348,86%,61%)] border-transparent;
 }
 .button.is-danger.is-loading::after {
   @apply border-[transparent_transparent_#fff_#fff];
@@ -1329,7 +1329,7 @@ fieldset[disabled] .button.is-danger.is-outlined {
 .button.is-danger.is-inverted.is-outlined.is-hovered,
 .button.is-danger.is-inverted.is-outlined:focus,
 .button.is-danger.is-inverted.is-outlined.is-focused {
-  @apply bg-white text-[hsl(348,86%,61%)];
+  @apply bg-white dark:bg-transparent text-[hsl(348,86%,61%)];
 }
 .button.is-danger.is-inverted.is-outlined.is-loading:hover::after,
 .button.is-danger.is-inverted.is-outlined.is-loading.is-hovered::after,
@@ -1369,7 +1369,7 @@ fieldset[disabled] .button.is-danger.is-inverted.is-outlined {
 }
 .button[disabled],
 fieldset[disabled] .button {
-  @apply bg-white shadow-none opacity-50 border-[hsl(0,0%,86%)];
+  @apply bg-white dark:bg-transparent shadow-none opacity-50 border-[hsl(0,0%,86%)];
 }
 .button.is-fullwidth {
   @apply flex w-full;
@@ -1378,7 +1378,7 @@ fieldset[disabled] .button {
   @apply text-transparent pointer-events-none after:absolute after:left-[calc(50%_-_(1em_*_0.5))] after:top-[calc(50%_-_(1em_*_0.5))];
 }
 .button.is-static {
-  @apply bg-neutral-100 text-[hsl(0,0%,48%)] shadow-none pointer-events-none border-[hsl(0,0%,86%)];
+  @apply bg-neutral-100 dark:bg-transparent text-[hsl(0,0%,48%)] shadow-none pointer-events-none border-[hsl(0,0%,86%)];
 }
 .button.is-rounded {
   @apply px-[calc(1em_+_0.25em)] rounded-full;
@@ -1554,7 +1554,7 @@ fieldset[disabled] .button {
   @apply text-[1em] mb-[1em];
 }
 .content blockquote {
-  @apply bg-neutral-100 px-[1.5em] py-[1.25em] border-l-[5px] border-l-[hsl(0,0%,86%)] border-solid;
+  @apply bg-neutral-100 dark:bg-transparent px-[1.5em] py-[1.25em] border-l-[5px] border-l-[hsl(0,0%,86%)] border-solid;
 }
 .content ol {
   @apply list-outside ml-[2em] mt-[1em];
@@ -1792,7 +1792,7 @@ div.icon-text {
   @apply h-32 w-32;
 }
 .notification {
-  @apply bg-neutral-100 rounded relative pl-6 pr-10 py-5;
+  @apply bg-neutral-100 dark:bg-zeus-400 dark:border dark:border-shakespeare-500 rounded relative pl-6 pr-10 py-5 dark:text-gray-200;
 }
 /* .notification a:not(.button):not(.dropdown-item) {
   @apply text-current underline;
@@ -1816,13 +1816,13 @@ div.icon-text {
   @apply text-current;
 } */
 .notification.is-white {
-  @apply bg-white text-zeus-500;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 .notification.is-black {
   @apply bg-zeus-500 text-white;
 }
 .notification.is-light {
-  @apply bg-neutral-100 text-black/70;
+  @apply bg-neutral-100 dark:bg-transparent text-black/70 dark:text-cyan-500/70;
 }
 .notification.is-dark {
   @apply bg-[hsl(0,0%,21%)] text-white;
@@ -1834,7 +1834,7 @@ div.icon-text {
   @apply bg-[#fff1eb] text-[#eb4600];
 }
 .notification.is-link {
-  @apply bg-ceruleanBlue-500 text-white;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white;
 }
 .notification.is-link.is-light {
   @apply bg-[#eff1fa] text-[#3850b7];
@@ -1852,7 +1852,7 @@ div.icon-text {
   @apply bg-[#effaf5] text-[#257953];
 }
 .notification.is-warning {
-  @apply bg-[hsl(44,100%,77%)] text-black/70;
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70;
 }
 .notification.is-warning.is-light {
   @apply bg-[#fffaeb] text-[#946c00];
@@ -1881,13 +1881,13 @@ div.icon-text {
   @apply bg-[hsl(0,0%,29%)] border-[none];
 }
 .progress.is-white::-webkit-progress-value {
-  @apply bg-white;
+  @apply bg-white dark:bg-transparent;
 }
 .progress.is-white::-moz-progress-bar {
-  @apply bg-white;
+  @apply bg-white dark:bg-transparent;
 }
 .progress.is-white::-ms-fill {
-  @apply bg-white;
+  @apply bg-white dark:bg-transparent;
 }
 .progress.is-white:indeterminate {
   @apply bg-[linear-gradient(to_right,hsl(0,0%,100%)_30%,hsl(0,0%,93%)_30%)];
@@ -1905,13 +1905,13 @@ div.icon-text {
   @apply bg-[linear-gradient(to_right,#2b2523_30%,hsl(0,0%,93%)_30%)];
 }
 .progress.is-light::-webkit-progress-value {
-  @apply bg-neutral-100;
+  @apply bg-neutral-100 dark:bg-transparent;
 }
 .progress.is-light::-moz-progress-bar {
-  @apply bg-neutral-100;
+  @apply bg-neutral-100 dark:bg-transparent;
 }
 .progress.is-light::-ms-fill {
-  @apply bg-neutral-100;
+  @apply bg-neutral-100 dark:bg-transparent;
 }
 .progress.is-light:indeterminate {
   @apply bg-[linear-gradient(to_right,hsl(0,0%,96%)_30%,hsl(0,0%,93%)_30%)];
@@ -1941,13 +1941,13 @@ div.icon-text {
   @apply bg-[linear-gradient(to_right,#D64000_30%,hsl(0,0%,93%)_30%)];
 }
 .progress.is-link::-webkit-progress-value {
-  @apply bg-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500;
 }
 .progress.is-link::-moz-progress-bar {
-  @apply bg-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500;
 }
 .progress.is-link::-ms-fill {
-  @apply bg-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500;
 }
 .progress.is-link:indeterminate {
   @apply bg-[linear-gradient(to_right,hsl(229,53%,53%)_30%,hsl(0,0%,93%)_30%)];
@@ -2027,7 +2027,7 @@ div.icon-text {
   }
 }
 .table {
-  @apply bg-white text-[hsl(0,0%,21%)];
+  @apply bg-white dark:bg-transparent text-[hsl(0,0%,21%)];
 }
 .table td,
 .table th {
@@ -2035,7 +2035,7 @@ div.icon-text {
 }
 .table td.is-white,
 .table th.is-white {
-  @apply bg-white text-zeus-500 border-white;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500 border-white;
 }
 .table td.is-black,
 .table th.is-black {
@@ -2043,7 +2043,7 @@ div.icon-text {
 }
 .table td.is-light,
 .table th.is-light {
-  @apply bg-neutral-100 border-neutral-100 text-black/70;
+  @apply bg-neutral-100 dark:bg-transparent border-neutral-100 text-black/70 dark:text-cyan-500/70;
 }
 .table td.is-dark,
 .table th.is-dark {
@@ -2055,7 +2055,7 @@ div.icon-text {
 }
 .table td.is-link,
 .table th.is-link {
-  @apply bg-ceruleanBlue-500 text-white border-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .table td.is-info,
 .table th.is-info {
@@ -2067,7 +2067,7 @@ div.icon-text {
 }
 .table td.is-warning,
 .table th.is-warning {
-  @apply bg-[hsl(44,100%,77%)] text-black/70 border-[hsl(44,100%,77%)];
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70 border-[hsl(44,100%,77%)];
 }
 .table td.is-danger,
 .table th.is-danger {
@@ -2149,7 +2149,7 @@ div.icon-text {
 .table.is-hoverable.is-striped
   tbody
   tr:not(.is-selected):hover:nth-child(even) {
-  @apply bg-neutral-100;
+  @apply bg-neutral-100 dark:bg-transparent;
 }
 .table.is-narrow td,
 .table.is-narrow th {
@@ -2205,19 +2205,19 @@ div.icon-text {
   @apply rounded-tr-none rounded-br-none;
 }
 .tag:not(body) {
-  @apply items-center bg-neutral-100 rounded text-[hsl(0,0%,29%)] inline-flex text-xs h-[2em] justify-center leading-normal whitespace-nowrap px-[0.75em];
+  @apply items-center bg-neutral-100 dark:bg-transparent rounded text-[hsl(0,0%,29%)] inline-flex text-xs h-[2em] justify-center leading-normal whitespace-nowrap px-[0.75em];
 }
 .tag:not(body) .delete {
   @apply mr-[-0.375rem] ml-1;
 }
 .tag:not(body).is-white {
-  @apply bg-white text-zeus-500;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 .tag:not(body).is-black {
   @apply bg-zeus-500 text-white;
 }
 .tag:not(body).is-light {
-  @apply bg-neutral-100 text-black/70;
+  @apply bg-neutral-100 dark:bg-transparent text-black/70 dark:text-cyan-500/70;
 }
 .tag:not(body).is-dark {
   @apply bg-[hsl(0,0%,21%)] text-white;
@@ -2229,7 +2229,7 @@ div.icon-text {
   @apply bg-[#fff1eb] text-[#eb4600];
 }
 .tag:not(body).is-link {
-  @apply bg-ceruleanBlue-500 text-white;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white;
 }
 .tag:not(body).is-link.is-light {
   @apply bg-[#eff1fa] text-[#3850b7];
@@ -2247,7 +2247,7 @@ div.icon-text {
   @apply bg-[#effaf5] text-[#257953];
 }
 .tag:not(body).is-warning {
-  @apply bg-[hsl(44,100%,77%)] text-black/70;
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70;
 }
 .tag:not(body).is-warning.is-light {
   @apply bg-[#fffaeb] text-[#946c00];
@@ -2316,7 +2316,7 @@ a.tag:hover {
   @apply align-middle;
 }
 .title {
-  @apply text-[hsl(0,0%,21%)] text-[2rem] font-semibold leading-[1.125];
+  @apply text-[hsl(0,0%,21%)] dark:text-white text-[2rem] font-semibold leading-[1.125];
 }
 .title strong {
   @apply text-inherit font-[inherit];
@@ -2346,10 +2346,10 @@ a.tag:hover {
   @apply text-xs;
 }
 .subtitle {
-  @apply text-[hsl(0,0%,29%)] text-xl font-normal leading-tight;
+  @apply text-[hsl(0,0%,29%)] dark:text-gray-400 text-xl font-normal leading-tight;
 }
 .subtitle strong {
-  @apply text-[hsl(0,0%,21%)] font-semibold;
+  @apply text-[hsl(0,0%,21%)] dark:text-gray-400 font-semibold;
 }
 .subtitle:not(.is-spaced) + .title {
   @apply mt-[-1.25rem];
@@ -2379,14 +2379,14 @@ a.tag:hover {
   @apply block text-[11px] tracking-[1px] uppercase mb-[5px];
 }
 .number {
-  @apply items-center bg-neutral-100 inline-flex text-xl h-[2em] justify-center min-w-[2.5em] text-center align-top mr-6 px-2 py-1 rounded-full;
+  @apply items-center bg-neutral-100 dark:bg-transparent inline-flex text-xl h-[2em] justify-center min-w-[2.5em] text-center align-top mr-6 px-2 py-1 rounded-full;
 }
 
 /* Bulma Form */
 .select select,
 .textarea,
 .input {
-  @apply bg-white rounded text-[hsl(0,0%,21%)] border-[hsl(0,0%,86%)];
+  @apply bg-white dark:bg-transparent rounded text-[hsl(0,0%,21%)] border-[hsl(0,0%,86%)];
 }
 .select select::-moz-placeholder,
 .textarea::-moz-placeholder,
@@ -2428,7 +2428,7 @@ a.tag:hover {
 .select select.is-active,
 .is-active.textarea,
 .is-active.input {
-  @apply shadow-[0_0_0_0.125em_rgba(72,95,199,0.25)] border-ceruleanBlue-500;
+  @apply shadow-[0_0_0_0.125em_rgba(72,95,199,0.25)] border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .select select[disabled],
 [disabled].textarea,
@@ -2437,7 +2437,7 @@ fieldset[disabled] .select select,
 .select fieldset[disabled] select,
 fieldset[disabled] .textarea,
 fieldset[disabled] .input {
-  @apply bg-neutral-100 border-neutral-100 shadow-none text-[hsl(0,0%,48%)];
+  @apply bg-neutral-100 dark:bg-transparent border-neutral-100 shadow-none text-[hsl(0,0%,48%)];
 }
 .select select[disabled]::-moz-placeholder,
 [disabled].textarea::-moz-placeholder,
@@ -2555,7 +2555,7 @@ fieldset[disabled] .input:-ms-input-placeholder {
 }
 .is-link.textarea,
 .is-link.input {
-  @apply border-ceruleanBlue-500;
+  @apply border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .is-link.textarea:focus,
 .is-link.input:focus,
@@ -2691,7 +2691,7 @@ fieldset[disabled] .checkbox,
   @apply h-[2.5em];
 }
 .select:not(.is-multiple):not(.is-loading)::after {
-  @apply z-[4] border-ceruleanBlue-500 right-[1.125em];
+  @apply z-[4] border-ceruleanBlue-500 dark:border-shakespeare-600 right-[1.125em];
 }
 .select.is-rounded select {
   @apply pl-[1em] rounded-full;
@@ -2800,10 +2800,10 @@ fieldset[disabled] .select select:hover {
   @apply shadow-[0_0_0_0.125em_rgba(214,64,0,0.25)];
 }
 .select.is-link:not(:hover)::after {
-  @apply border-ceruleanBlue-500;
+  @apply border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .select.is-link select {
-  @apply border-ceruleanBlue-500;
+  @apply border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .select.is-link select:hover,
 .select.is-link select.is-hovered {
@@ -2914,19 +2914,19 @@ fieldset[disabled] .select select:hover {
   @apply items-stretch flex justify-start relative;
 }
 .file.is-white .file-cta {
-  @apply bg-white text-zeus-500 border-transparent;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .file.is-white:hover .file-cta,
 .file.is-white.is-hovered .file-cta {
-  @apply bg-[#f9f9f9] text-zeus-500 border-transparent;
+  @apply bg-[#f9f9f9] text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .file.is-white:focus .file-cta,
 .file.is-white.is-focused .file-cta {
-  @apply shadow-[0_0_0.5em_rgba(255,255,255,0.25)] text-zeus-500 border-transparent;
+  @apply shadow-[0_0_0.5em_rgba(255,255,255,0.25)] text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .file.is-white:active .file-cta,
 .file.is-white.is-active .file-cta {
-  @apply bg-[#f2f2f2] text-zeus-500 border-transparent;
+  @apply bg-[#f2f2f2] text-zeus-500 dark:text-cyan-500 border-transparent;
 }
 .file.is-black .file-cta {
   @apply bg-zeus-500 text-white border-transparent;
@@ -2944,19 +2944,19 @@ fieldset[disabled] .select select:hover {
   @apply bg-[#1d1918] text-white border-transparent;
 }
 .file.is-light .file-cta {
-  @apply bg-neutral-100 text-black/70 border-transparent;
+  @apply bg-neutral-100 dark:bg-transparent text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .file.is-light:hover .file-cta,
 .file.is-light.is-hovered .file-cta {
-  @apply bg-[#eeeeee] text-black/70 border-transparent;
+  @apply bg-[#eeeeee] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .file.is-light:focus .file-cta,
 .file.is-light.is-focused .file-cta {
-  @apply shadow-[0_0_0.5em_rgba(245,245,245,0.25)] text-black/70 border-transparent;
+  @apply shadow-[0_0_0.5em_rgba(245,245,245,0.25)] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .file.is-light:active .file-cta,
 .file.is-light.is-active .file-cta {
-  @apply bg-[#e8e8e8] text-black/70 border-transparent;
+  @apply bg-[#e8e8e8] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .file.is-dark .file-cta {
   @apply bg-[hsl(0,0%,21%)] text-white border-transparent;
@@ -2989,7 +2989,7 @@ fieldset[disabled] .select select:hover {
   @apply bg-tiaMaria-500 text-white border-transparent;
 }
 .file.is-link .file-cta {
-  @apply bg-ceruleanBlue-500 text-white border-transparent;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white border-transparent;
 }
 .file.is-link:hover .file-cta,
 .file.is-link.is-hovered .file-cta {
@@ -3034,19 +3034,19 @@ fieldset[disabled] .select select:hover {
   @apply bg-[#3abb81] text-white border-transparent;
 }
 .file.is-warning .file-cta {
-  @apply bg-[hsl(44,100%,77%)] text-black/70 border-transparent;
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .file.is-warning:hover .file-cta,
 .file.is-warning.is-hovered .file-cta {
-  @apply bg-[#ffdc7d] text-black/70 border-transparent;
+  @apply bg-[#ffdc7d] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .file.is-warning:focus .file-cta,
 .file.is-warning.is-focused .file-cta {
-  @apply shadow-[0_0_0.5em_rgba(255,224,138,0.25)] text-black/70 border-transparent;
+  @apply shadow-[0_0_0.5em_rgba(255,224,138,0.25)] text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .file.is-warning:active .file-cta,
 .file.is-warning.is-active .file-cta {
-  @apply bg-goldenrod-500 text-black/70 border-transparent;
+  @apply bg-goldenrod-500 text-black/70 dark:text-cyan-500/70 border-transparent;
 }
 .file.is-danger .file-cta {
   @apply bg-[hsl(348,86%,61%)] text-white border-transparent;
@@ -3165,7 +3165,7 @@ fieldset[disabled] .select select:hover {
   @apply rounded text-[1em] whitespace-nowrap px-[1em] border-[hsl(0,0%,86%)];
 }
 .file-cta {
-  @apply bg-neutral-100 text-[hsl(0,0%,29%)];
+  @apply bg-neutral-100 dark:bg-transparent text-[hsl(0,0%,29%)];
 }
 .file-name {
   @apply block max-w-[16em] overflow-hidden text-ellipsis border-[hsl(0,0%,86%)] border-solid border-[1px_1px_1px_0];
@@ -3199,7 +3199,7 @@ fieldset[disabled] .select select:hover {
   @apply text-white;
 }
 .help.is-black {
-  @apply text-zeus-500;
+  @apply text-zeus-500 dark:text-cyan-500;
 }
 .help.is-light {
   @apply text-neutral-100;
@@ -3211,7 +3211,7 @@ fieldset[disabled] .select select:hover {
   @apply text-grenadier-500;
 }
 .help.is-link {
-  @apply text-ceruleanBlue-500;
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500;
 }
 .help.is-info {
   @apply text-[hsl(207,61%,53%)];
@@ -3439,7 +3439,7 @@ fieldset[disabled] .select select:hover {
   @apply text-base whitespace-nowrap;
 }
 .breadcrumb a {
-  @apply items-center text-ceruleanBlue-500 flex justify-center px-[0.75em] py-0 hover:text-[hsl(0,0%,21%)];
+  @apply items-center text-ceruleanBlue-500 dark:text-shakespeare-500 flex justify-center px-[0.75em] py-0 hover:text-[hsl(0,0%,21%)];
 }
 .breadcrumb li {
   @apply items-center flex;
@@ -3493,7 +3493,7 @@ fieldset[disabled] .select select:hover {
   @apply content-["≻"];
 }
 .card {
-  @apply bg-white rounded shadow-[0_0.5em_1em_-0.125em_rgba(43,37,35,0.1),0_0px_0_1px_rgba(43,37,35,0.02)] text-[hsl(0,0%,29%)] max-w-full relative;
+  @apply bg-white dark:bg-transparent rounded shadow-[0_0.5em_1em_-0.125em_rgba(43,37,35,0.1),0_0px_0_1px_rgba(43,37,35,0.02)] text-[hsl(0,0%,29%)] max-w-full relative;
 }
 .card-footer:first-child,
 .card-content:first-child,
@@ -3562,7 +3562,7 @@ fieldset[disabled] .select select:hover {
   @apply hidden min-w-[12rem] absolute z-20 pt-1 left-0 top-full;
 }
 .dropdown-content {
-  @apply bg-white rounded shadow-[0_0.5em_1em_-0.125em_rgba(43,37,35,0.1),0_0px_0_1px_rgba(43,37,35,0.02)] py-2;
+  @apply bg-white dark:bg-transparent rounded shadow-[0_0.5em_1em_-0.125em_rgba(43,37,35,0.1),0_0px_0_1px_rgba(43,37,35,0.02)] py-2;
 }
 .dropdown-item {
   @apply text-[hsl(0,0%,29%)] block text-sm leading-normal relative px-4 py-1.5;
@@ -3574,11 +3574,11 @@ button.dropdown-item {
 }
 a.dropdown-item:hover,
 button.dropdown-item:hover {
-  @apply bg-neutral-100 text-zeus-500;
+  @apply bg-neutral-100 dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 a.dropdown-item.is-active,
 button.dropdown-item.is-active {
-  @apply bg-ceruleanBlue-500 text-white;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white;
 }
 .dropdown-divider {
   @apply bg-[hsl(0,0%,93%)] block h-px mx-0 my-2 border-[none];
@@ -3721,10 +3721,10 @@ button.dropdown-item.is-active {
   @apply text-2xl;
 }
 .menu-list a {
-  @apply text-neutral-100 block px-[0.75em] py-[0.5em] rounded-sm hover:bg-zeus-500 hover:text-zeus-500;
+  @apply text-neutral-100 block px-[0.75em] py-[0.5em] rounded-sm hover:bg-zeus-500 hover:text-zeus-500 dark:text-cyan-500;
 }
 .menu-list a.is-active {
-  @apply bg-white text-white;
+  @apply bg-white dark:bg-transparent text-white;
 }
 .menu-list li ul {
   @apply m-[0.75em] pl-[0.75em] border-l-white border-l border-solid;
@@ -3736,7 +3736,7 @@ button.dropdown-item.is-active {
   @apply mb-[1em];
 }
 .message {
-  @apply bg-neutral-100 rounded text-base;
+  @apply bg-neutral-100 dark:bg-transparent rounded text-base;
 }
 /* .message strong {
   @apply text-current;
@@ -3757,7 +3757,7 @@ button.dropdown-item.is-active {
   @apply bg-[white];
 }
 .message.is-white .message-header {
-  @apply bg-white text-zeus-500;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 .message.is-white .message-body {
   @apply border-white;
@@ -3775,7 +3775,7 @@ button.dropdown-item.is-active {
   @apply bg-neutral-50;
 }
 .message.is-light .message-header {
-  @apply bg-neutral-100 text-black/70;
+  @apply bg-neutral-100 dark:bg-transparent text-black/70 dark:text-cyan-500/70;
 }
 .message.is-light .message-body {
   @apply border-neutral-100;
@@ -3802,10 +3802,10 @@ button.dropdown-item.is-active {
   @apply bg-[#eff1fa];
 }
 .message.is-link .message-header {
-  @apply bg-ceruleanBlue-500 text-white;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white;
 }
 .message.is-link .message-body {
-  @apply text-[#3850b7] border-ceruleanBlue-500;
+  @apply text-[#3850b7] border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .message.is-info {
   @apply bg-[#eff5fb];
@@ -3829,7 +3829,7 @@ button.dropdown-item.is-active {
   @apply bg-[#fffaeb];
 }
 .message.is-warning .message-header {
-  @apply bg-[hsl(44,100%,77%)] text-black/70;
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70;
 }
 .message.is-warning .message-body {
   @apply text-[#946c00] border-[hsl(44,100%,77%)];
@@ -3857,7 +3857,7 @@ button.dropdown-item.is-active {
 }
 .message-body code,
 .message-body pre {
-  @apply bg-white;
+  @apply bg-white dark:bg-transparent;
 }
 .message-body pre code {
   @apply bg-transparent;
@@ -3891,7 +3891,7 @@ button.dropdown-item.is-active {
 }
 .modal-card-head,
 .modal-card-foot {
-  @apply items-center bg-neutral-100 flex shrink-0 justify-start relative p-5;
+  @apply items-center bg-neutral-100 dark:bg-transparent flex shrink-0 justify-start relative p-5;
 }
 .modal-card-head {
   @apply rounded-t-md border-b-[hsl(0,0%,86%)] border-b border-solid;
@@ -3906,18 +3906,18 @@ button.dropdown-item.is-active {
   @apply mr-[0.5em];
 }
 .modal-card-body {
-  @apply bg-white grow shrink overflow-auto p-5;
+  @apply bg-white dark:bg-transparent grow shrink overflow-auto p-5;
   -webkit-overflow-scrolling: touch;
 }
 .navbar {
-  @apply bg-white min-h-[3.25rem] relative z-30 lg:min-h-[3.25rem];
+  @apply bg-white dark:bg-transparent dark:bg-zeus-800 dark:text-cyan-500 min-h-[3.25rem] relative z-30 lg:min-h-[3.25rem];
 }
 .navbar.is-white {
-  @apply bg-white text-zeus-500;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 .navbar.is-white .navbar-brand > .navbar-item,
 .navbar.is-white .navbar-brand .navbar-link {
-  @apply text-zeus-500;
+  @apply text-zeus-500 dark:text-cyan-500;
 }
 .navbar.is-white .navbar-brand > a.navbar-item:focus,
 .navbar.is-white .navbar-brand > a.navbar-item:hover,
@@ -3925,20 +3925,20 @@ button.dropdown-item.is-active {
 .navbar.is-white .navbar-brand .navbar-link:focus,
 .navbar.is-white .navbar-brand .navbar-link:hover,
 .navbar.is-white .navbar-brand .navbar-link.is-active {
-  @apply bg-[#f2f2f2] text-zeus-500;
+  @apply bg-[#f2f2f2] text-zeus-500 dark:text-cyan-500;
 }
 .navbar.is-white .navbar-brand .navbar-link::after {
   @apply border-zeus-500;
 }
 .navbar.is-white .navbar-burger {
-  @apply text-zeus-500;
+  @apply text-zeus-500 dark:text-cyan-500;
 }
 @media screen and (min-width: 1024px) {
   .navbar.is-white .navbar-start > .navbar-item,
   .navbar.is-white .navbar-start .navbar-link,
   .navbar.is-white .navbar-end > .navbar-item,
   .navbar.is-white .navbar-end .navbar-link {
-    @apply text-zeus-500;
+    @apply text-zeus-500 dark:text-cyan-500;
   }
   .navbar.is-white .navbar-start > a.navbar-item:focus,
   .navbar.is-white .navbar-start > a.navbar-item:hover,
@@ -3952,7 +3952,7 @@ button.dropdown-item.is-active {
   .navbar.is-white .navbar-end .navbar-link:focus,
   .navbar.is-white .navbar-end .navbar-link:hover,
   .navbar.is-white .navbar-end .navbar-link.is-active {
-    @apply bg-[#f2f2f2] text-zeus-500;
+    @apply bg-[#f2f2f2] text-zeus-500 dark:text-cyan-500;
   }
   .navbar.is-white .navbar-start .navbar-link::after,
   .navbar.is-white .navbar-end .navbar-link::after {
@@ -4007,11 +4007,11 @@ button.dropdown-item.is-active {
   }
 }
 .navbar.is-light {
-  @apply bg-neutral-100 text-black/70;
+  @apply bg-neutral-100 dark:bg-transparent text-black/70 dark:text-cyan-500/70;
 }
 .navbar.is-light .navbar-brand > .navbar-item,
 .navbar.is-light .navbar-brand .navbar-link {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 .navbar.is-light .navbar-brand > a.navbar-item:focus,
 .navbar.is-light .navbar-brand > a.navbar-item:hover,
@@ -4019,20 +4019,20 @@ button.dropdown-item.is-active {
 .navbar.is-light .navbar-brand .navbar-link:focus,
 .navbar.is-light .navbar-brand .navbar-link:hover,
 .navbar.is-light .navbar-brand .navbar-link.is-active {
-  @apply bg-[#e8e8e8] text-black/70;
+  @apply bg-[#e8e8e8] text-black/70 dark:text-cyan-500/70;
 }
 .navbar.is-light .navbar-brand .navbar-link::after {
   @apply border-black/70;
 }
 .navbar.is-light .navbar-burger {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 @media screen and (min-width: 1024px) {
   .navbar.is-light .navbar-start > .navbar-item,
   .navbar.is-light .navbar-start .navbar-link,
   .navbar.is-light .navbar-end > .navbar-item,
   .navbar.is-light .navbar-end .navbar-link {
-    @apply text-black/70;
+    @apply text-black/70 dark:text-cyan-500/70;
   }
   .navbar.is-light .navbar-start > a.navbar-item:focus,
   .navbar.is-light .navbar-start > a.navbar-item:hover,
@@ -4046,7 +4046,7 @@ button.dropdown-item.is-active {
   .navbar.is-light .navbar-end .navbar-link:focus,
   .navbar.is-light .navbar-end .navbar-link:hover,
   .navbar.is-light .navbar-end .navbar-link.is-active {
-    @apply bg-[#e8e8e8] text-black/70;
+    @apply bg-[#e8e8e8] text-black/70 dark:text-cyan-500/70;
   }
   .navbar.is-light .navbar-start .navbar-link::after,
   .navbar.is-light .navbar-end .navbar-link::after {
@@ -4148,7 +4148,7 @@ button.dropdown-item.is-active {
   }
 }
 .navbar.is-link {
-  @apply bg-ceruleanBlue-500 text-white;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white;
 }
 .navbar.is-link .navbar-brand > .navbar-item,
 .navbar.is-link .navbar-brand .navbar-link {
@@ -4289,11 +4289,11 @@ button.dropdown-item.is-active {
   }
 }
 .navbar.is-warning {
-  @apply bg-[hsl(44,100%,77%)] text-black/70;
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70;
 }
 .navbar.is-warning .navbar-brand > .navbar-item,
 .navbar.is-warning .navbar-brand .navbar-link {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 .navbar.is-warning .navbar-brand > a.navbar-item:focus,
 .navbar.is-warning .navbar-brand > a.navbar-item:hover,
@@ -4301,20 +4301,20 @@ button.dropdown-item.is-active {
 .navbar.is-warning .navbar-brand .navbar-link:focus,
 .navbar.is-warning .navbar-brand .navbar-link:hover,
 .navbar.is-warning .navbar-brand .navbar-link.is-active {
-  @apply bg-goldenrod-500 text-black/70;
+  @apply bg-goldenrod-500 text-black/70 dark:text-cyan-500/70;
 }
 .navbar.is-warning .navbar-brand .navbar-link::after {
   @apply border-black/70;
 }
 .navbar.is-warning .navbar-burger {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 @media screen and (min-width: 1024px) {
   .navbar.is-warning .navbar-start > .navbar-item,
   .navbar.is-warning .navbar-start .navbar-link,
   .navbar.is-warning .navbar-end > .navbar-item,
   .navbar.is-warning .navbar-end .navbar-link {
-    @apply text-black/70;
+    @apply text-black/70 dark:text-cyan-500/70;
   }
   .navbar.is-warning .navbar-start > a.navbar-item:focus,
   .navbar.is-warning .navbar-start > a.navbar-item:hover,
@@ -4328,7 +4328,7 @@ button.dropdown-item.is-active {
   .navbar.is-warning .navbar-end .navbar-link:focus,
   .navbar.is-warning .navbar-end .navbar-link:hover,
   .navbar.is-warning .navbar-end .navbar-link.is-active {
-    @apply bg-goldenrod-500 text-black/70;
+    @apply bg-goldenrod-500 text-black/70 dark:text-cyan-500/70;
   }
   .navbar.is-warning .navbar-start .navbar-link::after,
   .navbar.is-warning .navbar-end .navbar-link::after {
@@ -4452,7 +4452,7 @@ body.has-navbar-fixed-bottom {
 }
 .navbar-item,
 .navbar-link {
-  @apply text-[hsl(0,0%,29%)] block leading-normal relative px-3 py-2;
+  @apply text-[hsl(0,0%,29%)] dark:text-cyan-500 block leading-normal relative px-3 py-2;
 }
 .navbar-item .icon:only-child,
 .navbar-link .icon:only-child {
@@ -4470,7 +4470,7 @@ a.navbar-item.is-active,
 .navbar-link:focus-within,
 .navbar-link:hover,
 .navbar-link.is-active {
-  @apply bg-neutral-50 text-ceruleanBlue-500;
+  @apply bg-neutral-50 text-ceruleanBlue-500 dark:text-shakespeare-500;
 }
 .navbar-item {
   @apply grow-0 shrink-0;
@@ -4486,20 +4486,20 @@ a.navbar-item.is-active,
 }
 .navbar-item.is-tab:focus,
 .navbar-item.is-tab:hover {
-  @apply bg-transparent border-b-ceruleanBlue-500;
+  @apply bg-transparent border-b-ceruleanBlue-500 dark:border-b-shakespeare-500;
 }
 .navbar-item.is-tab.is-active {
-  @apply bg-transparent text-ceruleanBlue-500 pb-[calc(0.5rem_-_3px)] border-b-ceruleanBlue-500 border-b-[3px];
+  @apply bg-transparent text-ceruleanBlue-500 dark:text-shakespeare-500 pb-[calc(0.5rem_-_3px)] border-b-ceruleanBlue-500 dark:border-b-shakespeare-500 border-b-[3px];
   border-bottom-style: solid;
 }
 .navbar-content {
   @apply grow shrink;
 }
 .navbar-link:not(.is-arrowless) {
-  @apply pr-[2.5em] after:mt-[-0.375em] after:border-ceruleanBlue-500 after:right-[1.125em];
+  @apply pr-[2.5em] after:mt-[-0.375em] after:border-ceruleanBlue-500 dark:border-shakespeare-600 after:right-[1.125em];
 }
 .navbar-divider {
-  @apply bg-neutral-100 hidden h-0.5 mx-0 my-2 border-[none] lg:block;
+  @apply bg-neutral-100 dark:bg-transparent hidden h-0.5 mx-0 my-2 border-[none] lg:block;
 }
 @media screen and (max-width: 1023px) {
   .navbar > .container {
@@ -4513,7 +4513,7 @@ a.navbar-item.is-active,
     @apply hidden;
   }
   .navbar-menu {
-    @apply bg-white shadow-md shadow-zeus-500/10 px-0 py-2;
+    @apply bg-white dark:bg-transparent shadow-md shadow-zeus-500/10 px-0 py-2;
   }
   .navbar-menu.is-active {
     @apply block;
@@ -4620,7 +4620,7 @@ a.navbar-item.is-active,
   }
   a.navbar-item.is-active,
   .navbar-link.is-active {
-    @apply text-zeus-500;
+    @apply text-zeus-500 dark:text-cyan-500;
   }
   a.navbar-item.is-active:not(:focus):not(:hover),
   .navbar-link.is-active:not(:focus):not(:hover) {
@@ -4672,7 +4672,7 @@ a.navbar-item.is-active,
 .pagination-previous:focus,
 .pagination-next:focus,
 .pagination-link:focus {
-  @apply border-ceruleanBlue-500;
+  @apply border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .pagination-previous:active,
 .pagination-next:active,
@@ -4692,7 +4692,7 @@ a.navbar-item.is-active,
   @apply whitespace-nowrap px-[0.75em];
 }
 .pagination-link.is-current {
-  @apply bg-ceruleanBlue-500 text-white border-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .pagination-ellipsis {
   @apply text-[hsl(0,0%,71%)] pointer-events-none;
@@ -4760,7 +4760,7 @@ a.navbar-item.is-active,
   @apply mb-6;
 }
 .panel.is-white .panel-heading {
-  @apply bg-white text-zeus-500;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 .panel.is-white .panel-tabs a.is-active {
   @apply border-b-white;
@@ -4775,10 +4775,10 @@ a.navbar-item.is-active,
   @apply border-b-zeus-500;
 }
 .panel.is-black .panel-block.is-active .panel-icon {
-  @apply text-zeus-500;
+  @apply text-zeus-500 dark:text-cyan-500;
 }
 .panel.is-light .panel-heading {
-  @apply bg-neutral-100 text-black/70;
+  @apply bg-neutral-100 dark:bg-transparent text-black/70 dark:text-cyan-500/70;
 }
 .panel.is-light .panel-tabs a.is-active {
   @apply border-b-neutral-100;
@@ -4805,13 +4805,13 @@ a.navbar-item.is-active,
   @apply text-grenadier-500;
 }
 .panel.is-link .panel-heading {
-  @apply bg-ceruleanBlue-500 text-white;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white;
 }
 .panel.is-link .panel-tabs a.is-active {
-  @apply border-b-ceruleanBlue-500;
+  @apply border-b-ceruleanBlue-500 dark:border-b-shakespeare-500;
 }
 .panel.is-link .panel-block.is-active .panel-icon {
-  @apply text-ceruleanBlue-500;
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500;
 }
 .panel.is-info .panel-heading {
   @apply bg-[hsl(207,61%,53%)] text-white;
@@ -4832,7 +4832,7 @@ a.navbar-item.is-active,
   @apply text-[hsl(153,53%,53%)];
 }
 .panel.is-warning .panel-heading {
-  @apply bg-[hsl(44,100%,77%)] text-black/70;
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70;
 }
 .panel.is-warning .panel-tabs a.is-active {
   @apply border-b-[hsl(44,100%,77%)];
@@ -4866,7 +4866,7 @@ a.navbar-item.is-active,
   @apply text-[hsl(0,0%,21%)] border-b-[hsl(0,0%,29%)];
 }
 .panel-list a {
-  @apply text-[hsl(0,0%,29%)] hover:text-ceruleanBlue-500;
+  @apply text-[hsl(0,0%,29%)] hover:text-ceruleanBlue-500 dark:hover:text-shakespeare-500;
 }
 .panel-block {
   @apply items-center text-[hsl(0,0%,21%)] flex justify-start px-[0.75em] py-[0.5em] last:rounded-br-md last:rounded-bl-md;
@@ -4881,10 +4881,10 @@ a.navbar-item.is-active,
   @apply flex-wrap;
 }
 .panel-block.is-active {
-  @apply text-[hsl(0,0%,21%)] border-l-ceruleanBlue-500;
+  @apply text-[hsl(0,0%,21%)] border-l-ceruleanBlue-500 dark:border-l-shakespeare-500;
 }
 .panel-block.is-active .panel-icon {
-  @apply text-ceruleanBlue-500;
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500;
 }
 a.panel-block,
 label.panel-block {
@@ -4892,7 +4892,7 @@ label.panel-block {
 }
 a.panel-block:hover,
 label.panel-block:hover {
-  @apply bg-neutral-100;
+  @apply bg-neutral-100 dark:bg-transparent;
 }
 .panel-icon {
   @apply inline-block text-sm h-[1em] leading-[1em] text-center align-top w-[1em] text-[hsl(0,0%,48%)] mr-[0.75em];
@@ -4912,7 +4912,7 @@ label.panel-block:hover {
   @apply block;
 }
 .tabs li.is-active a {
-  @apply text-ceruleanBlue-500 border-b-ceruleanBlue-500;
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500 border-b-ceruleanBlue-500 dark:border-b-shakespeare-500;
 }
 .tabs ul {
   @apply items-center flex grow shrink-0 justify-start border-b-[hsl(0,0%,86%)] border-b;
@@ -4940,16 +4940,16 @@ label.panel-block:hover {
   @apply justify-end;
 }
 .tabs.is-boxed a {
-  @apply border rounded-[4px_4px_0_0] border-solid border-transparent hover:bg-neutral-100 hover:border-b-[hsl(0,0%,86%)];
+  @apply border rounded-[4px_4px_0_0] border-solid border-transparent hover:bg-neutral-100 dark:bg-transparent hover:border-b-[hsl(0,0%,86%)];
 }
 .tabs.is-boxed li.is-active a {
-  @apply bg-white border-b-transparent border-[hsl(0,0%,86%)];
+  @apply bg-white dark:bg-transparent border-b-transparent border-[hsl(0,0%,86%)];
 }
 .tabs.is-fullwidth li {
   @apply grow shrink-0;
 }
 .tabs.is-toggle a {
-  @apply border relative mb-0 border-[hsl(0,0%,86%)] border-solid hover:bg-neutral-100 hover:z-[2] hover:border-[hsl(0,0%,71%)];
+  @apply border relative mb-0 border-[hsl(0,0%,86%)] border-solid hover:bg-neutral-100 dark:bg-transparent hover:z-[2] hover:border-[hsl(0,0%,71%)];
 }
 .tabs.is-toggle li + li {
   @apply -ml-px;
@@ -4961,7 +4961,7 @@ label.panel-block:hover {
   @apply rounded-tr rounded-br;
 }
 .tabs.is-toggle li.is-active a {
-  @apply bg-ceruleanBlue-500 text-white z-[1] border-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white z-[1] border-ceruleanBlue-500 dark:border-shakespeare-600;
 }
 .tabs.is-toggle ul {
   @apply border-b-[none];
@@ -6558,10 +6558,10 @@ a.has-text-white:focus {
   @apply text-[#e6e6e6];
 }
 .has-background-white {
-  @apply bg-white;
+  @apply bg-white dark:bg-transparent;
 }
 .has-text-black {
-  @apply text-zeus-500;
+  @apply text-zeus-500 dark:text-cyan-500;
 }
 a.has-text-black:hover,
 a.has-text-black:focus {
@@ -6578,7 +6578,7 @@ a.has-text-light:focus {
   @apply text-[#dbdbdb];
 }
 .has-background-light {
-  @apply bg-neutral-100;
+  @apply bg-neutral-100 dark:bg-transparent;
 }
 .has-text-dark {
   @apply text-[hsl(0,0%,21%)];
@@ -6621,14 +6621,14 @@ a.has-text-primary-dark:focus {
   @apply bg-[#eb4600];
 }
 .has-text-link {
-  @apply text-ceruleanBlue-500;
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500;
 }
 a.has-text-link:hover,
 a.has-text-link:focus {
   @apply text-[#3449a8];
 }
 .has-background-link {
-  @apply bg-ceruleanBlue-500;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500;
 }
 .has-text-link-light {
   @apply text-[#eff1fa];
@@ -6816,7 +6816,7 @@ a.has-text-danger-dark:focus {
   @apply text-neutral-100;
 }
 .has-background-white-ter {
-  @apply bg-neutral-100;
+  @apply bg-neutral-100 dark:bg-transparent;
 }
 .has-text-white-bis {
   @apply text-neutral-50;
@@ -8106,7 +8106,7 @@ a.has-text-danger-dark:focus {
   @apply border-b-[none];
 }
 .hero.is-white {
-  @apply bg-white text-zeus-500;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500;
 }
 .hero.is-white
   a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -8114,39 +8114,39 @@ a.has-text-danger-dark:focus {
   @apply text-inherit;
 }
 .hero.is-white .title {
-  @apply text-zeus-500;
+  @apply text-zeus-500 dark:text-cyan-500;
 }
 .hero.is-white .subtitle {
-  @apply text-zeus-500/90;
+  @apply text-zeus-500 dark:text-cyan-500/90;
 }
 .hero.is-white .subtitle a:not(.button),
 .hero.is-white .subtitle strong {
-  @apply text-zeus-500;
+  @apply text-zeus-500 dark:text-cyan-500;
 }
 @media screen and (max-width: 1023px) {
   .hero.is-white .navbar-menu {
-    @apply bg-white;
+    @apply bg-white dark:bg-transparent;
   }
 }
 .hero.is-white .navbar-item,
 .hero.is-white .navbar-link {
-  @apply text-zeus-500/70;
+  @apply text-zeus-500 dark:text-cyan-500/70;
 }
 .hero.is-white a.navbar-item:hover,
 .hero.is-white a.navbar-item.is-active,
 .hero.is-white .navbar-link:hover,
 .hero.is-white .navbar-link.is-active {
-  @apply bg-[#f2f2f2] text-zeus-500;
+  @apply bg-[#f2f2f2] text-zeus-500 dark:text-cyan-500;
 }
 .hero.is-white .tabs a {
-  @apply text-zeus-500 opacity-90 hover:opacity-100;
+  @apply text-zeus-500 dark:text-cyan-500 opacity-90 hover:opacity-100;
 }
 .hero.is-white .tabs li.is-active a {
   @apply text-white opacity-100;
 }
 .hero.is-white .tabs.is-boxed a,
 .hero.is-white .tabs.is-toggle a {
-  @apply text-zeus-500;
+  @apply text-zeus-500 dark:text-cyan-500;
 }
 .hero.is-white .tabs.is-boxed a:hover,
 .hero.is-white .tabs.is-toggle a:hover {
@@ -8203,7 +8203,7 @@ a.has-text-danger-dark:focus {
   @apply text-white opacity-90 hover:opacity-100;
 }
 .hero.is-black .tabs li.is-active a {
-  @apply text-zeus-500 opacity-100;
+  @apply text-zeus-500 dark:text-cyan-500 opacity-100;
 }
 .hero.is-black .tabs.is-boxed a,
 .hero.is-black .tabs.is-toggle a {
@@ -8217,7 +8217,7 @@ a.has-text-danger-dark:focus {
 .hero.is-black .tabs.is-boxed li.is-active a:hover,
 .hero.is-black .tabs.is-toggle li.is-active a,
 .hero.is-black .tabs.is-toggle li.is-active a:hover {
-  @apply bg-white text-zeus-500 border-white;
+  @apply bg-white dark:bg-transparent text-zeus-500 dark:text-cyan-500 border-white;
 }
 .hero.is-black.is-bold {
   @apply bg-[linear-gradient(141deg,#100b0b_0%,#2b2523_71%,#3c322c_100%)];
@@ -8228,7 +8228,7 @@ a.has-text-danger-dark:focus {
   }
 }
 .hero.is-light {
-  @apply bg-neutral-100 text-black/70;
+  @apply bg-neutral-100 dark:bg-transparent text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-light
   a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -8236,39 +8236,39 @@ a.has-text-danger-dark:focus {
   @apply text-inherit;
 }
 .hero.is-light .title {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-light .subtitle {
   @apply text-[rgba(0,0,0,0.9)];
 }
 .hero.is-light .subtitle a:not(.button),
 .hero.is-light .subtitle strong {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 @media screen and (max-width: 1023px) {
   .hero.is-light .navbar-menu {
-    @apply bg-neutral-100;
+    @apply bg-neutral-100 dark:bg-transparent;
   }
 }
 .hero.is-light .navbar-item,
 .hero.is-light .navbar-link {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-light a.navbar-item:hover,
 .hero.is-light a.navbar-item.is-active,
 .hero.is-light .navbar-link:hover,
 .hero.is-light .navbar-link.is-active {
-  @apply bg-[#e8e8e8] text-black/70;
+  @apply bg-[#e8e8e8] text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-light .tabs a {
-  @apply text-black/70 opacity-90 hover:opacity-100;
+  @apply text-black/70 dark:text-cyan-500/70 opacity-90 hover:opacity-100;
 }
 .hero.is-light .tabs li.is-active a {
   @apply text-neutral-100 opacity-100;
 }
 .hero.is-light .tabs.is-boxed a,
 .hero.is-light .tabs.is-toggle a {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-light .tabs.is-boxed a:hover,
 .hero.is-light .tabs.is-toggle a:hover {
@@ -8339,7 +8339,7 @@ a.has-text-danger-dark:focus {
 .hero.is-dark .tabs.is-boxed li.is-active a:hover,
 .hero.is-dark .tabs.is-toggle li.is-active a,
 .hero.is-dark .tabs.is-toggle li.is-active a:hover {
-  @apply bg-white text-[hsl(0,0%,21%)] border-white;
+  @apply bg-white dark:bg-transparent text-[hsl(0,0%,21%)] border-white;
 }
 .hero.is-dark.is-bold {
   @apply bg-[linear-gradient(141deg,#1f191a_0%,hsl(0,0%,21%)_71%,#46403f_100%)];
@@ -8400,7 +8400,7 @@ a.has-text-danger-dark:focus {
 .hero.is-primary .tabs.is-boxed li.is-active a:hover,
 .hero.is-primary .tabs.is-toggle li.is-active a,
 .hero.is-primary .tabs.is-toggle li.is-active a:hover {
-  @apply bg-white text-grenadier-500 border-white;
+  @apply bg-white dark:bg-transparent text-grenadier-500 border-white;
 }
 .hero.is-primary.is-bold {
   @apply bg-[linear-gradient(141deg,#a31600_0%,#D64000_71%,#f07000_100%)];
@@ -8411,7 +8411,7 @@ a.has-text-danger-dark:focus {
   }
 }
 .hero.is-link {
-  @apply bg-ceruleanBlue-500 text-white;
+  @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500 text-white;
 }
 .hero.is-link
   a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -8430,7 +8430,7 @@ a.has-text-danger-dark:focus {
 }
 @media screen and (max-width: 1023px) {
   .hero.is-link .navbar-menu {
-    @apply bg-ceruleanBlue-500;
+    @apply bg-ceruleanBlue-500 dark:bg-shakespeare-500;
   }
 }
 .hero.is-link .navbar-item,
@@ -8447,7 +8447,7 @@ a.has-text-danger-dark:focus {
   @apply text-white opacity-90 hover:opacity-100;
 }
 .hero.is-link .tabs li.is-active a {
-  @apply text-ceruleanBlue-500 opacity-100;
+  @apply text-ceruleanBlue-500 dark:text-shakespeare-500 opacity-100;
 }
 .hero.is-link .tabs.is-boxed a,
 .hero.is-link .tabs.is-toggle a {
@@ -8461,7 +8461,7 @@ a.has-text-danger-dark:focus {
 .hero.is-link .tabs.is-boxed li.is-active a:hover,
 .hero.is-link .tabs.is-toggle li.is-active a,
 .hero.is-link .tabs.is-toggle li.is-active a:hover {
-  @apply bg-white text-ceruleanBlue-500 border-white;
+  @apply bg-white dark:bg-transparent text-ceruleanBlue-500 dark:text-shakespeare-500 border-white;
 }
 .hero.is-link.is-bold {
   @apply bg-[linear-gradient(141deg,#2959b3_0%,hsl(229,53%,53%)_71%,#5658d2_100%)];
@@ -8522,7 +8522,7 @@ a.has-text-danger-dark:focus {
 .hero.is-info .tabs.is-boxed li.is-active a:hover,
 .hero.is-info .tabs.is-toggle li.is-active a,
 .hero.is-info .tabs.is-toggle li.is-active a:hover {
-  @apply bg-white text-[hsl(207,61%,53%)] border-white;
+  @apply bg-white dark:bg-transparent text-[hsl(207,61%,53%)] border-white;
 }
 .hero.is-info.is-bold {
   @apply bg-[linear-gradient(141deg,#208fbc_0%,hsl(207,61%,53%)_71%,#4d83db_100%)];
@@ -8583,7 +8583,7 @@ a.has-text-danger-dark:focus {
 .hero.is-success .tabs.is-boxed li.is-active a:hover,
 .hero.is-success .tabs.is-toggle li.is-active a,
 .hero.is-success .tabs.is-toggle li.is-active a:hover {
-  @apply bg-white text-[hsl(153,53%,53%)] border-white;
+  @apply bg-white dark:bg-transparent text-[hsl(153,53%,53%)] border-white;
 }
 .hero.is-success.is-bold {
   @apply bg-[linear-gradient(141deg,#29b35e_0%,hsl(153,53%,53%)_71%,#56d2af_100%)];
@@ -8594,7 +8594,7 @@ a.has-text-danger-dark:focus {
   }
 }
 .hero.is-warning {
-  @apply bg-[hsl(44,100%,77%)] text-black/70;
+  @apply bg-[hsl(44,100%,77%)] text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-warning
   a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -8602,14 +8602,14 @@ a.has-text-danger-dark:focus {
   @apply text-inherit;
 }
 .hero.is-warning .title {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-warning .subtitle {
   @apply text-[rgba(0,0,0,0.9)];
 }
 .hero.is-warning .subtitle a:not(.button),
 .hero.is-warning .subtitle strong {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 @media screen and (max-width: 1023px) {
   .hero.is-warning .navbar-menu {
@@ -8618,23 +8618,23 @@ a.has-text-danger-dark:focus {
 }
 .hero.is-warning .navbar-item,
 .hero.is-warning .navbar-link {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-warning a.navbar-item:hover,
 .hero.is-warning a.navbar-item.is-active,
 .hero.is-warning .navbar-link:hover,
 .hero.is-warning .navbar-link.is-active {
-  @apply bg-goldenrod-500 text-black/70;
+  @apply bg-goldenrod-500 text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-warning .tabs a {
-  @apply text-black/70 opacity-90 hover:opacity-100;
+  @apply text-black/70 dark:text-cyan-500/70 opacity-90 hover:opacity-100;
 }
 .hero.is-warning .tabs li.is-active a {
   @apply text-[hsl(44,100%,77%)] opacity-100;
 }
 .hero.is-warning .tabs.is-boxed a,
 .hero.is-warning .tabs.is-toggle a {
-  @apply text-black/70;
+  @apply text-black/70 dark:text-cyan-500/70;
 }
 .hero.is-warning .tabs.is-boxed a:hover,
 .hero.is-warning .tabs.is-toggle a:hover {
@@ -8705,7 +8705,7 @@ a.has-text-danger-dark:focus {
 .hero.is-danger .tabs.is-boxed li.is-active a:hover,
 .hero.is-danger .tabs.is-toggle li.is-active a,
 .hero.is-danger .tabs.is-toggle li.is-active a:hover {
-  @apply bg-white text-[hsl(348,86%,61%)] border-white;
+  @apply bg-white dark:bg-transparent text-[hsl(348,86%,61%)] border-white;
 }
 .hero.is-danger.is-bold {
   @apply bg-[linear-gradient(141deg,#fa0a62_0%,hsl(348,86%,61%)_71%,#f7595f_100%)];

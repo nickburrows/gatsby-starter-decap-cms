@@ -63,22 +63,12 @@ export default function FullWidthImage(props) {
             }}>
             {/* Any content here will be centered in the component */}
             {title && (
-              <h1 className="font-bold md:text-4xl xl:text-5xl bg-primary-500 text-white p-1 leading-none shadow shadow-primary-500/50">
+              <h1 className="font-bold md:text-5xl xl:text-6xl bg-primary-500 dark:bg-danube-500 dark:text-white text-white p-1 leading-none shadow shadow-primary-500/50 dark:shadow-danube-500/20">
                 {title}
               </h1>
             )}
             {subheading && (
-              <h3
-                className="font-bold md:text-xl lg:text-2xl xl:text-3xl"
-                style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
-                  color: "white",
-                  lineHeight: "1",
-                  padding: "0.25rem",
-                  marginTop: "0.5rem",
-                }}>
+              <h3 className="font-bold md:text-xl lg:text-2xl xl:text-3xl shadow-md shadow-primary-500/20 dark:shadow-cyan-500/50 text-white leading-none p-1 mt-2 bg-primary-500 dark:bg-danube-500">
                 {subheading}
               </h3>
             )}
