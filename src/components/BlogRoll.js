@@ -7,17 +7,19 @@ const BlogRollTemplate = props => {
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
-    <div className="columns is-multiline">
+    <div className="grid gap-12 grid-cols-2">
       {posts &&
         posts.map(({ node: post }) => (
-          <div className="is-parent column is-6" key={post.id}>
+          <div
+            className="flex-none rounded-t rounded-b-none overflow-hidden shadow-lg"
+            key={post.id}>
             <article
-              className={`blog-list-item tile is-child box notification ${
+              className={`relative block p-5 border border-gray-200 rounded-lg shadow md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 ${
                 post.frontmatter.featuredpost ? "is-featured" : ""
               }`}>
-              <header>
+              <header className="flex">
                 {post?.frontmatter?.featuredimage && (
-                  <div className="featured-thumbnail">
+                  <div className="post-image mr-6">
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: post.frontmatter.featuredimage,
@@ -32,7 +34,8 @@ const BlogRollTemplate = props => {
                     />
                   </div>
                 )}
-                <p className="post-meta">
+
+                <div className="post-title">
                   <Link
                     className="font-bold underline hover:no-underline text-orange-700 hover:text-orange-800 text-2xl"
                     to={post.fields.slug}>
@@ -42,9 +45,9 @@ const BlogRollTemplate = props => {
                   <span className="subtitle text-xl block">
                     {post.frontmatter.date}
                   </span>
-                </p>
+                </div>
               </header>
-              <p>
+              <p className="block">
                 {post.excerpt}
                 <br />
                 <br />

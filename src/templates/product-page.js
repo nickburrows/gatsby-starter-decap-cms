@@ -48,19 +48,19 @@ export const ProductPageTemplate = ({
                 <div className="tile is-ancestor">
                   <div className="tile is-vertical">
                     <div className="tile">
-                      <div className="tile is-parent is-vertical">
-                        <article className="tile is-child">
+                      <div className="tile p-3 is-vertical">
+                        <article className="tile m-0">
                           <PreviewCompatibleImage imageInfo={main.image1} />
                         </article>
                       </div>
-                      <div className="tile is-parent">
-                        <article className="tile is-child">
+                      <div className="tile p-3">
+                        <article className="tile m-0">
                           <PreviewCompatibleImage imageInfo={main.image2} />
                         </article>
                       </div>
                     </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
+                    <div className="tile p-3">
+                      <article className="tile m-0">
                         <PreviewCompatibleImage imageInfo={main.image3} />
                       </article>
                     </div>
@@ -79,7 +79,7 @@ export const ProductPageTemplate = ({
             <div className="columns">
               <div className="column is-10 is-offset-1">
                 <h2 className="font-semibold text-4xl">{pricing.heading}</h2>
-                <p className="is-size-5">{pricing.description}</p>
+                <p className="text-xl">{pricing.description}</p>
                 <Pricing data={pricing.plans} />
               </div>
             </div>

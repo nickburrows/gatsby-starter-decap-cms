@@ -13,7 +13,7 @@ const Pricing = ({ data }) => (
           <p className="font-semibold">{price.description}</p>
           <ul>
             {price.items.map(item => (
-              <li key={item} className="is-size-5">
+              <li key={item} className="text-xl">
                 {item}
               </li>
             ))}

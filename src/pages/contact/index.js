@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 
 function encode(data) {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 }
 
@@ -14,11 +14,11 @@ export default class Index extends React.Component {
     this.state = { isValidated: false };
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
     fetch("/", {
@@ -30,7 +30,7 @@ export default class Index extends React.Component {
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
-      .catch((error) => alert(error));
+      .catch(error => alert(error));
   };
 
   render() {
@@ -46,8 +46,7 @@ export default class Index extends React.Component {
                 action="/contact/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                onSubmit={this.handleSubmit}
-              >
+                onSubmit={this.handleSubmit}>
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
@@ -101,7 +100,7 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
+                  <button className="button link" type="submit">
                     Send
                   </button>
                 </div>
